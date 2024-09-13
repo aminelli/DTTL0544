@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    
+
+  </div>
 </body>
 <!-- This setup is not suitable for production. -->
 <!-- Only use it in development! -->
@@ -16,6 +19,7 @@
 }
 </script>
 <script type="text/babel" data-type="module">
+
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -32,12 +36,24 @@ let App = function MyApp() {
     <div>
       <h1>Welcome to my app</h1>
       <MyButton />
+      <br/>
+      <MyButton />
+      <br/>
+      <MyButton />
+      <br/>
+      <MyButton />
+      <br/>
+      <MyButton />
+      <br/>
+      <MyButton />
     </div>
   );
 }
 
+var div = document.getElementById('root');
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(div);
+
 root.render(
   <StrictMode>
     <App />
