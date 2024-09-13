@@ -4,6 +4,8 @@ import './App.css';
 
 import { LoginClassComponent } from './components/LoginClassComponent';  
 
+import { LoginFncComponent } from './components/LoginFncComponent';
+
 export default class App extends React.Component {
 
   /*
@@ -23,7 +25,7 @@ export default class App extends React.Component {
         <LoginClassComponent username="tonyminels" password="test" />
       </div>
       <div>
-        <LoginClassComponent username="pippo" password="pluto" />
+        <LoginFncComponent />
       </div>
      </>
    );
