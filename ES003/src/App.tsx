@@ -2,7 +2,32 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { LoginClassComponent } from './components/LoginClassComponent';  
+
 export default class App extends React.Component {
+
+  /*
+  constructor(props)
+  componentDidMount
+  componentDidUpdate
+  shouldComponentUpdate
+  componentWillUnmount
+  render()  
+  */
+
+  render() {
+    console.log("APP -> render");
+   return (
+     <> 
+      <div>
+        <LoginClassComponent username="tonyminels" password="test" />
+      </div>
+      <div>
+        <LoginClassComponent username="pippo" password="pluto" />
+      </div>
+     </>
+   );
+ }
 
   componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<{}>, snapshot?: any): void {
     console.log("APP -> componentDidUpdate");
@@ -20,19 +45,13 @@ export default class App extends React.Component {
     console.log("APP -> componentWillUnmount");
   }
 
+   
 
   forceUpdate(callback?: (() => void) | undefined): void {
     console.log("APP -> forceUpdate");
   }
 
-  render() {
-     console.log("APP -> render");
-    return (
-      <>
-        Test
-      </>
-    );
-  }
+ 
 
 }
 
